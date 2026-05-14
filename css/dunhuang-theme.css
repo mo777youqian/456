@@ -1,0 +1,207 @@
+/* ===== 敦煌主题样式 ===== */
+/* 时间线样式 */
+.events {
+  list-style: none;
+  border-left: 1px solid var(--accent);
+  padding-left: 2.5rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.events li {
+  margin-bottom: 2.8rem;
+  position: relative;
+}
+
+.events li::before {
+  content: '';
+  position: absolute;
+  left: -2.85rem;
+  top: 0.55rem;
+  width: 7px;
+  height: 7px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+.ev-year {
+  display: block;
+  font-weight: 600;
+  color: var(--accent2);
+  margin-bottom: 0.3rem;
+}
+
+.ev-body strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+/* 纹样样式 */
+.pattern-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.pat {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.pat:nth-child(even) { flex-direction: row-reverse; }
+
+.pat-vis {
+  flex: 0 0 100px;
+  color: var(--accent);
+}
+
+.pat-vis svg { width: 100%; height: auto; }
+
+.pat-text { flex: 1; }
+
+.pat-text h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.08em;
+}
+
+.pat-text p { margin-bottom: 0.6rem; }
+
+.pat-note {
+  display: block;
+  border-top: 1px solid rgba(168,152,128,0.35);
+  padding-top: 0.5rem;
+  margin-top: 0.3rem;
+}
+
+/* 角色样式 */
+.relation-map {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--accent2);
+  overflow-x: auto;
+}
+
+.relation-svg {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.char-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 3rem;
+}
+
+.char h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.2rem;
+}
+
+.char-kw { margin-bottom: 0.5rem; }
+
+/* 上色区域样式 */
+.coloring-area {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.coloring-canvas {
+  flex: 0 1 360px;
+  aspect-ratio: 1;
+  background: var(--bg);
+  border: 1px solid rgba(168,152,128,0.3);
+  padding: 1.5rem;
+  color: var(--accent);
+}
+
+.coloring-canvas svg { width: 100%; height: 100%; }
+
+.color-zone {
+  cursor: pointer;
+  transition: fill 0.25s;
+}
+
+.color-zone:hover { opacity: 0.75; }
+
+.color-palette { flex: 0 1 180px; }
+
+.palette-colors {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.color-btn {
+  width: 34px;
+  height: 34px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  margin: 0 auto;
+}
+
+.color-btn:hover { border-color: var(--ink2); }
+.color-btn.active { border-color: var(--ink); }
+
+.reset-btn {
+  background: none;
+  border: 1px solid var(--dim);
+  color: var(--ink2);
+  padding: 0.4rem 1.2rem;
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-family: var(--ff-sans);
+  letter-spacing: 0.15em;
+  transition: all 0.3s;
+}
+
+.reset-btn:hover {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+
+/* 颜色展示样式 */
+.color-showcase {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 3rem;
+}
+
+.color-item { display: flex; gap: 1rem; align-items: flex-start; }
+
+.color-swatch {
+  flex: 0 0 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-top: 0.2rem;
+}
+
+.color-item h3 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+/* 长文本块样式 */
+.prose .t-body { margin-bottom: 1.2rem; }
+.prose .t-body:last-child { margin-bottom: 0; }
+
+/* 响应式设计 */
+@media (max-width: 640px) {
+  .pat, .pat:nth-child(even) { flex-direction: column; }
+  .pat-vis { flex: 0 0 80px; }
+  .char-list { grid-template-columns: 1fr; gap: 2rem; }
+  .coloring-area { flex-direction: column; align-items: center; }
+  .coloring-canvas { max-width: 300px; }
+  .color-showcase { grid-template-columns: 1fr; }
+}

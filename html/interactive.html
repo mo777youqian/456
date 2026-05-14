@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>点亮敦煌｜敦煌数字展</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/dunhuang-theme.css">
+    <link rel="stylesheet" href="../css/page-styles.css">
+    <style>
+        /* 仅保留页面布局样式 */
+        .interactive-section { background: #fdfaf5; padding: 60px 20px; display: flex; flex-direction: column; align-items: center; }
+        .workspace { display: flex; flex-wrap: wrap; justify-content: center; gap: 50px; max-width: 1100px; margin: 0 auto; }
+        #dunhuang-drawing { width: 100%; max-width: 500px; height: auto; background: #fff; padding: 20px; border: 1px solid #e2d5bd; cursor: crosshair; }
+
+        /* 这里的样式仅用于网页预览时的交互效果 */
+        .region { cursor: pointer; transition: fill 0.3s; }
+        .region:hover { stroke-width: 2px !important; }
+
+        .palette-grid { display: grid; grid-template-columns: repeat(2, 70px); gap: 15px; }
+        .color-item { width: 70px; height: 70px; border-radius: 50%; cursor: pointer; border: 4px solid transparent; transition: all 0.3s; position: relative; }
+        .color-item.active { border-color: #A64036; transform: scale(1.1); }
+        .color-name { position: absolute; bottom: -25px; width: 100%; text-align: center; font-size: 12px; color: #8e7e6a; }
+        .btn-group { margin-top: 50px; display: flex; gap: 20px; }
+        .btn-dh { padding: 12px 35px; border: none; cursor: pointer; font-size: 16px; background: #A64036; color: #fff; }
+        #tip-box { margin-top: 20px; color: #A64036; font-weight: bold; min-height: 24px; }
+    </style>
+</head>
+<body class="page-interactive">
+
+<div id="common-header"></div>
+
+<div class="page-hero" style="background-image:url('../img/dunhuang_banner3.jpg')">
+    <h1>点亮敦煌</h1>
+    <p class="hero-sub">感受千年矿物色彩的魅力</p>
+</div>
+
+<section class="sec">
+    <div class="sec-lead">
+        <h2>藻井：天圆地方的宇宙观</h2>
+        <p>请点击色块选择颜色，再点击图案区域上色。完成后点击导出按钮即可保存。</p>
+    </div>
+
+    <div class="interactive-section">
+        <div class="workspace">
+            <svg id="dunhuang-drawing" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <rect width="200" height="200" fill="#ffffff" />
+
+                <path class="region" fill="#ffffff" stroke="#333" stroke-width="1" d="M10,10 H190 V190 H10 Z M20,20 V180 H180 V20 Z" />
+
+                <path class="region" fill="#ffffff" stroke="#333" stroke-width="1" d="M25,25 L50,50 H150 L175,25 Z" />
+                <path class="region" fill="#ffffff" stroke="#333" stroke-width="1" d="M175,25 L150,50 V150 L175,175 Z" />
+                <path class="region" fill="#ffffff" stroke="#333" stroke-width="1" d="M175,175 L150,150 H50 L25,175 Z" />
+                <path class="region" fill="#ffffff" stroke="#333" stroke-width="1" d="M25,175 L50,150 V50 L25,25 Z" />
+
+                <g transform="rotate(45 100 100)">
+                    <path class="region" fill="#ffffff" stroke="#333" stroke-width="1" d="M100,60 Q120,60 120,80 L100,100 L80,80 Q80,60 100,60 Z" />
+                    <path class="region" fill="#ffffff" stroke="#333" stroke-width="1" d="M140,100 Q140,120 120,120 L100,100 L120,80 Q140,80 140,100 Z" />
+                    <path class="region" fill="#ffffff" stroke="#333" stroke-width="1" d="M100,140 Q80,140 80,120 L100,100 L120,120 Q120,140 100,140 Z" />
+                    <path class="region" fill="#ffffff" stroke="#333" stroke-width="1" d="M60,100 Q60,80 80,80 L100,100 L80,120 Q60,120 60,100 Z" />
+                </g>
+
+                <circle class="region" fill="#ffffff" stroke="#333" stroke-width="1" cx="100" cy="100" r="18" />
+                <circle class="region" fill="#ffffff" stroke="#333" stroke-width="1" cx="100" cy="100" r="8" />
+
+                <path class="region" fill="#ffffff" stroke="#333" stroke-width="1" d="M30,30 Q45,30 45,45 Q30,45 30,30" />
+                <path class="region" fill="#ffffff" stroke="#333" stroke-width="1" d="M170,30 Q155,30 155,45 Q170,45 170,30" />
+                <path class="region" fill="#ffffff" stroke="#333" stroke-width="1" d="M30,170 Q45,170 45,155 Q30,155 30,170" />
+                <path class="region" fill="#ffffff" stroke="#333" stroke-width="1" d="M170,170 Q155,170 155,155 Q170,155 170,170" />
+            </svg>
+
+            <div class="color-tool">
+                <div class="palette-grid">
+                    <div class="color-item" style="background: #A64036;" data-color="#A64036" data-name="朱砂"></div>
+                    <div class="color-item" style="background: #43676B;" data-color="#43676B" data-name="石青"></div>
+                    <div class="color-item" style="background: #8B9662;" data-color="#8B9662" data-name="石绿"></div>
+                    <div class="color-item" style="background: #D3A248;" data-color="#D3A248" data-name="藤黄"></div>
+                    <div class="color-item" style="background: #533B31;" data-color="#533B31" data-name="赭石"></div>
+                    <div class="color-item" style="background: #E9D7B3;" data-color="#E9D7B3" data-name="土黄"></div>
+                </div>
+                <div id="tip-box">请选择色彩</div>
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <button class="btn-dh" id="download-btn">保存我的敦煌作品</button>
+            <button class="btn-dh" style="background:#8e7e6a" id="clear-btn">清空</button>
+        </div>
+    </div>
+</section>
+
+<canvas id="canvas-export" width="1000" height="1000" style="display:none;"></canvas>
+<div id="common-footer"></div>
+<script src="../js/common.js"></script>
+<script>
+    const svg = document.getElementById('dunhuang-drawing');
+    const regions = document.querySelectorAll('.region');
+    const colorItems = document.querySelectorAll('.color-item');
+    const tipBox = document.getElementById('tip-box');
+    let currentColor = null;
+
+    // 1. 颜色选择逻辑
+    colorItems.forEach(item => {
+        item.addEventListener('click', () => {
+            colorItems.forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+            currentColor = item.dataset.color;
+            tipBox.innerText = `当前选中：${item.dataset.name}`;
+        });
+    });
+
+    // 2. 上色逻辑
+    regions.forEach(region => {
+        region.addEventListener('click', () => {
+            if (currentColor) {
+                // 重要：直接修改 fill 属性，而不是仅修改 style，确保能被 XMLSerializer 抓取
+                region.setAttribute('fill', currentColor);
+                region.style.fill = currentColor;
+            } else {
+                tipBox.innerText = "请先点击右侧色块";
+            }
+        });
+    });
+
+    // 3. 导出逻辑
+    document.getElementById('download-btn').addEventListener('click', () => {
+        const canvas = document.getElementById('canvas-export');
+        const ctx = canvas.getContext('2d');
+
+        // 序列化 SVG 为 XML 字符串
+        const svgData = new XMLSerializer().serializeToString(svg);
+
+        // 使用 Blob 处理以解决中文乱码或特殊字符问题
+        const svgBlob = new Blob([svgData], {type: 'image/svg+xml;charset=utf-8'});
+        const url = URL.createObjectURL(svgBlob);
+
+        const img = new Image();
+        img.onload = function() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            // 先铺一层纯白底色，防止透明导出时在某些软件里变黑
+            ctx.fillStyle = "#ffffff";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            // 绘制图片
+            ctx.drawImage(img, 0, 0, 1000, 1000);
+
+            // 转换并下载
+            const pngUrl = canvas.toDataURL("image/png");
+            const a = document.createElement("a");
+            a.href = pngUrl;
+            a.download = "点亮敦煌_作品.png";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+
+            // 释放内存
+            URL.revokeObjectURL(url);
+        };
+        img.src = url;
+    });
+
+    // 4. 清空
+    document.getElementById('clear-btn').addEventListener('click', () => {
+        regions.forEach(r => {
+            r.setAttribute('fill', '#ffffff');
+            r.style.fill = '#ffffff';
+        });
+    });
+</script>
+</body>
+</html>

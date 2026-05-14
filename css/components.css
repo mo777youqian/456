@@ -1,0 +1,173 @@
+/* ===== 组件样式 ===== */
+/* 导航栏 */
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  gap: clamp(0.9rem, 2vw, 2rem);
+  padding: 1rem 1.2rem;
+  flex-wrap: wrap;
+  background: rgba(30,22,14,0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.top-nav a {
+  color: rgba(240,230,214,0.7);
+  text-decoration: none;
+  font-size: 0.82rem;
+  letter-spacing: 0.2em;
+  font-family: var(--ff-sans);
+  transition: color 0.3s;
+}
+
+.top-nav a:hover { color: #fff; }
+
+/* 页脚 */
+#footer {
+  background: var(--ink);
+  color: var(--dim);
+  text-align: center;
+  padding: 4rem 8vw;
+}
+
+#footer blockquote {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  color: var(--bg2);
+  font-style: normal;
+  margin-bottom: 0.5rem;
+  line-height: 1.8;
+}
+
+#footer blockquote cite {
+  display: block;
+  font-size: 0.8rem;
+  color: rgba(240,230,214,0.55);
+  font-style: normal;
+  margin-top: 0.6rem;
+  letter-spacing: 0.15em;
+}
+
+#footer > p {
+  font-size: 0.8rem;
+  margin-top: 2rem;
+  letter-spacing: 0.1em;
+  font-family: var(--ff-sans);
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem 1.5rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(240,230,214,0.1);
+}
+
+.footer-nav a {
+  color: rgba(240,230,214,0.5);
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-family: var(--ff-sans);
+  letter-spacing: 0.1em;
+  transition: color 0.3s;
+}
+
+.footer-nav a:hover { color: var(--bg); }
+
+.ft-small {
+  margin-top: 1.5rem !important;
+  font-size: 0.7rem !important;
+  opacity: 0.35;
+}
+
+/* 通用区块样式 */
+.sec {
+  padding: 6rem 5%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sec-dark {
+  background: var(--bg2);
+}
+
+.sec-dark > * {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sec-lead { 
+  margin-bottom: 3.5rem;
+}
+
+.sec-lead h2 {
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.sec-lead p {
+  font-size: 0.95rem;
+  max-width: 540px;
+}
+
+/* 响应式设计 */
+@media (max-width: 640px) {
+  .top-nav { gap: 1rem; padding: 0.8rem 1rem; flex-wrap: wrap; }
+}
+@media (max-width: 980px) {
+  .top-nav {
+    justify-content: flex-start;
+    overflow-x: auto;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    scrollbar-width: thin;
+  }
+  .top-nav a { flex: 0 0 auto; }
+}
+/* 当前页面高亮 */
+.top-nav a.active {
+  color: #fff;
+  font-weight: 600;
+  position: relative;
+}
+
+.top-nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.footer-nav a.active {
+  color: var(--bg);
+  font-weight: 600;
+}
+/* 确保所有sec-lead对齐 */
+.sec-lead {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* 确保prose内容对齐 */
+.prose {
+}
+/* 调试：显示对齐参考线 */
+.debug-alignment .sec-lead,
+.debug-alignment .prose,
+.debug-alignment .events {
+  outline: 1px solid rgba(255, 0, 0, 0.3);
+}

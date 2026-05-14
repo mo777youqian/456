@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>敦煌</title>
+  <!-- 通用样式 -->
+  <link rel="stylesheet" href="css/common.css">
+  <!-- 组件样式 -->
+  <link rel="stylesheet" href="css/components.css">
+  <!-- 敦煌主题样式 -->
+  <link rel="stylesheet" href="css/dunhuang-theme.css">
+  <!-- 首页专用样式 -->
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+  <header id="header">
+    <nav class="top-nav">
+      <a href="index.html">首页</a>
+      <a href="html/overview.html">概览</a>
+      <a href="html/mogao.html">莫高窟</a>
+      <a href="html/murals.html">壁画</a>
+      <a href="html/apsaras.html">飞天</a>
+      <a href="html/library-cave.html">藏经洞</a>
+      <a href="html/silk-road.html">丝路</a>
+      <a href="html/colors.html">色彩</a>
+      <a href="html/donors.html">供养人</a>
+      <a href="html/dance.html">乐舞</a>
+      <a href="html/digital.html">数字敦煌</a>
+      <a href="html/interactive.html">点亮敦煌</a>
+    </nav>
+  </header>
+
+  <!-- Banner轮播区域 -->
+  <div class="banner-container">
+    <div class="banner-slider">
+      <!-- Banner 1 - 佛陀与菩萨 -->
+      <div class="banner-slide active" style="background-image: url('img/dunhuang_banner1.png');">
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+          <p class="hero-small">河西走廊尽头</p>
+          <h1>敦煌</h1>
+          <p class="hero-sub">沙漠里长出来的美术馆，<br>开了一千六百年，还没闭馆。</p>
+        </div>
+      </div>
+      
+      <!-- Banner 2 - 舞者壁画 -->
+      <div class="banner-slide" style="background-image: url('img/dunhuang_banner2.jpg');">
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+          <p class="hero-small">丝路明珠</p>
+          <h1>莫高窟</h1>
+          <p class="hero-sub">七百三十五个洞窟，<br>四万五千平方米壁画。</p>
+        </div>
+      </div>
+      
+      <!-- Banner 3 - 飞天与佛陀 -->
+      <div class="banner-slide" style="background-image: url('img/dunhuang_banner3.jpg');">
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+          <p class="hero-small">佛教艺术宝库</p>
+          <h1>飞天壁画</h1>
+          <p class="hero-sub">没有翅膀的飞行，<br>只靠飘带就能翱翔天际。</p>
+        </div>
+      </div>
+      
+      <!-- Banner 4 - 敦煌色彩渐变 -->
+      <div class="banner-slide" style="background-image: url('img/dunhuang_banner2.jpg');">
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+          <p class="hero-small">世界文化遗产</p>
+          <h1>千年传承</h1>
+          <p class="hero-sub">从北魏到元代，<br>跨越十个朝代的艺术瑰宝。</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 导航按钮 -->
+    <div class="banner-nav">
+      <button class="banner-prev" aria-label="上一张">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="currentColor"/>
+        </svg>
+      </button>
+      <button class="banner-next" aria-label="下一张">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor"/>
+        </svg>
+      </button>
+    </div>
+    
+    <!-- 指示器 -->
+    <div class="banner-indicators">
+      <button class="indicator active" data-slide="0" aria-label="切换到第1张图片"></button>
+      <button class="indicator" data-slide="1" aria-label="切换到第2张图片"></button>
+      <button class="indicator" data-slide="2" aria-label="切换到第3张图片"></button>
+      <button class="indicator" data-slide="3" aria-label="切换到第4张图片"></button>
+    </div>
+    
+
+  </div>
+
+  <section id="history" class="sec">
+    <div class="sec-lead">
+      <h2>两千年，五件事</h2>
+      <p>敦煌的故事不复杂。一条路经过这里，人们开始在崖壁上凿洞、画画。后来路断了，洞封了，画也被忘了。再后来，有人重新打开了那扇门。</p>
+    </div>
+    <ol class="events">
+      <li>
+        <span class="ev-year t-label">前 111</span>
+        <div class="ev-body">
+          <strong>设郡</strong>
+          <p class="t-body">汉武帝在河西走廊最西端设敦煌郡。从此这里不只是边塞，也是门户——往西走，就是另一个世界。</p>
+        </div>
+      </li>
+      <li>
+        <span class="ev-year t-label">366</span>
+        <div class="ev-body">
+          <strong>第一窟</strong>
+          <p class="t-body">一个叫乐僔的和尚路过鸣沙山，看见崖壁上金光万道。他停下来，凿了第一个洞。这一凿，凿出了莫高窟。</p>
+        </div>
+      </li>
+      <li>
+        <span class="ev-year t-label">盛唐</span>
+        <div class="ev-body">
+          <strong>极盛</strong>
+          <p class="t-body">最好的画师、最贵的颜料、最虔诚的供养人，全涌到这里。飞天从墙上飘出来的时候，大概就是这个年代。</p>
+        </div>
+      </li>
+      <li>
+        <span class="ev-year t-label">1900</span>
+        <div class="ev-body">
+          <strong>藏经洞</strong>
+          <p class="t-body">道士王圆箓清扫洞窟时，墙壁裂开一条缝。缝后面藏着五万多件文书。这是二十世纪最重要的考古发现之一，也是最令人心痛的。</p>
+        </div>
+      </li>
+      <li>
+        <span class="ev-year t-label">1987</span>
+        <div class="ev-body">
+          <strong>世界遗产</strong>
+          <p class="t-body">莫高窟进入世界文化遗产名录。七百三十五个洞窟、四万五千平方米壁画，终于有了一个正式的名分。</p>
+        </div>
+      </li>
+    </ol>
+   
+  </section>
+
+  <section id="patterns" class="sec sec-dark">
+    <div class="sec-lead">
+      <h2>纹样</h2>
+      <p>敦煌的纹样不是装饰，是语言。每一种纹样都在说一件事：这个世界是怎么构成的。</p>
+    </div>
+    <div class="pattern-list">
+      <article class="pat">
+        <div class="pat-vis">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="60" cy="60" r="50" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="60" cy="60" r="35" fill="none" stroke="currentColor" stroke-width="1"/>
+            <circle cx="60" cy="60" r="20" fill="none" stroke="currentColor" stroke-width="0.8"/>
+            <path d="M60 10 Q75 35 60 60 Q45 35 60 10Z" fill="currentColor" opacity="0.15"/>
+            <path d="M60 110 Q45 85 60 60 Q75 85 60 110Z" fill="currentColor" opacity="0.15"/>
+            <path d="M10 60 Q35 45 60 60 Q35 75 10 60Z" fill="currentColor" opacity="0.15"/>
+            <path d="M110 60 Q85 75 60 60 Q85 45 110 60Z" fill="currentColor" opacity="0.15"/>
+          </svg>
+        </div>
+        <div class="pat-text">
+          <h3>藻井</h3>
+          <p class="t-body">抬头看洞窟顶部正中央，那个同心圆层层套叠的图案就是藻井。它模拟的是天穹——古人觉得天是圆的，所以画成这样。莲花从中心展开，卷草在外圈缠绕，石青和土红交替铺色。</p>
+          <span class="pat-note t-label">骨架：同心圆 · 莲花与卷草 · 石青配土红</span>
+        </div>
+      </article>
+      <article class="pat">
+        <div class="pat-vis">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M10 60 Q30 30 60 40 Q90 50 110 20" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M10 80 Q30 50 60 60 Q90 70 110 40" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="35" cy="45" r="8" fill="currentColor" opacity="0.2"/>
+            <circle cx="75" cy="55" r="6" fill="currentColor" opacity="0.2"/>
+            <circle cx="55" cy="70" r="7" fill="currentColor" opacity="0.2"/>
+            <path d="M20 90 Q40 70 60 80 Q80 90 100 70" fill="none" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        </div>
+        <div class="pat-text">
+          <h3>卷草</h3>
+          <p class="t-body">S形的波浪线一路翻卷过去，枝叶从两侧长出来，忍冬和葡萄交替出现。这种纹样最常出现在壁画的边框上，像一条活的藤蔓把画面框住。</p>
+          <span class="pat-note t-label">骨架：S形波线 · 忍冬与葡萄 · 石绿配赭石</span>
+        </div>
+      </article>
+      <article class="pat">
+        <div class="pat-vis">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="20" y="20" width="80" height="80" fill="none" stroke="currentColor" stroke-width="1.5" rx="4"/>
+            <rect x="35" y="35" width="50" height="50" fill="none" stroke="currentColor" stroke-width="1" rx="2" transform="rotate(45 60 60)"/>
+            <circle cx="60" cy="60" r="12" fill="currentColor" opacity="0.15"/>
+            <line x1="60" y1="20" x2="60" y2="100" stroke="currentColor" stroke-width="0.8" opacity="0.4"/>
+            <line x1="20" y1="60" x2="100" y2="60" stroke="currentColor" stroke-width="0.8" opacity="0.4"/>
+          </svg>
+        </div>
+        <div class="pat-text">
+          <h3>联珠</h3>
+          <p class="t-body">一圈小圆珠串成环，中间关着一对对称的动物或花卉。这个纹样不是中国原创——它从波斯萨珊王朝沿着丝绸之路传过来的，是文化交融最直观的证据。</p>
+          <span class="pat-note t-label">骨架：圆珠串联 · 对兽纹 · 金色配石青</span>
+        </div>
+      </article>
+      <article class="pat">
+        <div class="pat-vis">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M60 15 L70 45 L100 45 L75 65 L85 95 L60 78 L35 95 L45 65 L20 45 L50 45Z" fill="currentColor" opacity="0.12" stroke="currentColor" stroke-width="1.2"/>
+            <circle cx="60" cy="55" r="15" fill="none" stroke="currentColor" stroke-width="1"/>
+            <circle cx="60" cy="55" r="8" fill="currentColor" opacity="0.15"/>
+          </svg>
+        </div>
+        <div class="pat-text">
+          <h3>团花</h3>
+          <p class="t-body">从中心向外一层层放射开来，花瓣叠花瓣。唐代人特别喜欢这种纹样，用朱砂和石绿画出来，富丽得很，但不俗气。宝相花是最常见的母题。</p>
+          <span class="pat-note t-label">骨架：放射对称 · 宝相花与莲瓣 · 朱砂配石绿</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="characters" class="sec">
+    <div class="sec-lead">
+      <h2>众相</h2>
+      <p>壁画里反复出现的那些面孔，不是随便画的。每个角色都有自己的位置和职责，像一个沉默的剧团。</p>
+    </div>
+    <div class="relation-map">
+      <svg class="relation-svg" viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg" aria-label="角色关系图">
+        <line x1="150" y1="100" x2="300" y2="100" stroke="currentColor" stroke-width="0.8" stroke-dasharray="5,4" opacity="0.5"/>
+        <line x1="300" y1="100" x2="450" y2="100" stroke="currentColor" stroke-width="0.8" stroke-dasharray="5,4" opacity="0.5"/>
+        <line x1="150" y1="100" x2="300" y2="45" stroke="currentColor" stroke-width="0.8" stroke-dasharray="5,4" opacity="0.35"/>
+        <line x1="450" y1="100" x2="300" y2="45" stroke="currentColor" stroke-width="0.8" stroke-dasharray="5,4" opacity="0.35"/>
+        <text x="225" y="92" fill="currentColor" font-size="10" text-anchor="middle" opacity="0.6">护法</text>
+        <text x="375" y="92" fill="currentColor" font-size="10" text-anchor="middle" opacity="0.6">胁侍</text>
+        <circle cx="150" cy="100" r="4" fill="currentColor" opacity="0.6"/>
+        <circle cx="300" cy="100" r="4" fill="currentColor" opacity="0.6"/>
+        <circle cx="450" cy="100" r="4" fill="currentColor" opacity="0.6"/>
+        <circle cx="300" cy="45" r="4" fill="currentColor" opacity="0.6"/>
+        <text x="150" y="125" fill="currentColor" font-size="12" text-anchor="middle">飞天</text>
+        <text x="300" y="125" fill="currentColor" font-size="12" text-anchor="middle">佛陀</text>
+        <text x="450" y="125" fill="currentColor" font-size="12" text-anchor="middle">菩萨</text>
+        <text x="300" y="37" fill="currentColor" font-size="12" text-anchor="middle">天王</text>
+      </svg>
+    </div>
+    <div class="char-list">
+      <div class="char">
+        <h3>飞天</h3>
+        <p class="char-kw t-label">乐舞 · 散花 · 凌空</p>
+        <p class="t-body">没有翅膀，只靠两条飘带就飞起来了。这大概是全世界最浪漫的飞行方式。她们在佛的头顶撒花、奏乐，是敦煌最出圈的形象。</p>
+      </div>
+      <div class="char">
+        <h3>佛陀</h3>
+        <p class="char-kw t-label">说法 · 光明 · 慈悲</p>
+        <p class="t-body">端坐在画面正中，头顶肉髻，身披袈裟，表情永远是那种看透一切之后的平静。所有其他角色都围着他转。</p>
+      </div>
+      <div class="char">
+        <h3>菩萨</h3>
+        <p class="char-kw t-label">宝冠 · 璎珞 · 度众</p>
+        <p class="t-body">站在佛的两侧，戴着华丽的宝冠，身上挂满璎珞。和佛不同，菩萨的表情更接近人——有温度，有情感，像一个愿意弯下腰来的神。</p>
+      </div>
+      <div class="char">
+        <h3>天王</h3>
+        <p class="char-kw t-label">护法 · 威严 · 力量</p>
+        <p class="t-body">穿铠甲、踩小鬼、瞪眼睛。天王是佛教世界的保安，负责把不好的东西挡在门外。画得越凶，说明画师越用心。</p>
+      </div>
+    </div>
+    <div class="image-gallery">
+      <figure class="gallery-item">
+        <img src="img/5.jpeg" alt="敦煌壁画中的众相">
+        <figcaption class="t-dim">壁画中的佛陀、菩萨与飞天</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="img/6.jpeg" alt="天王与护法神">
+        <figcaption class="t-dim">天王与护法神形象</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="interactive" class="sec sec-dark">
+    <div class="sec-lead">
+      <h2>点亮敦煌</h2>
+      <p>敦煌壁画的颜料都是矿石磨成的粉——朱砂、石青、石绿、雌黄。选一种颜色，点一下花瓣，试试看。</p>
+    </div>
+    <div class="coloring-area">
+      <div class="coloring-canvas">
+        <svg id="coloringSvg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="200" cy="200" r="180" fill="none" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+          <circle cx="200" cy="200" r="140" fill="none" stroke="currentColor" stroke-width="0.8" opacity="0.2"/>
+          <circle cx="200" cy="200" r="50" class="color-zone" data-zone="center" fill="#f0e6d6" stroke="currentColor" stroke-width="1"/>
+          <path d="M200 150 Q225 105 200 50 Q175 105 200 150Z" class="color-zone" data-zone="petal-top" fill="#f0e6d6" stroke="currentColor" stroke-width="1"/>
+          <path d="M200 250 Q225 295 200 350 Q175 295 200 250Z" class="color-zone" data-zone="petal-bottom" fill="#f0e6d6" stroke="currentColor" stroke-width="1"/>
+          <path d="M150 200 Q105 175 50 200 Q105 225 150 200Z" class="color-zone" data-zone="petal-left" fill="#f0e6d6" stroke="currentColor" stroke-width="1"/>
+          <path d="M250 200 Q295 175 350 200 Q295 225 250 200Z" class="color-zone" data-zone="petal-right" fill="#f0e6d6" stroke="currentColor" stroke-width="1"/>
+          <path d="M160 160 Q125 125 90 90 Q130 140 160 160Z" class="color-zone" data-zone="petal-tl" fill="#f0e6d6" stroke="currentColor" stroke-width="1"/>
+          <path d="M240 160 Q275 125 310 90 Q270 140 240 160Z" class="color-zone" data-zone="petal-tr" fill="#f0e6d6" stroke="currentColor" stroke-width="1"/>
+          <path d="M160 240 Q125 275 90 310 Q130 260 160 240Z" class="color-zone" data-zone="petal-bl" fill="#f0e6d6" stroke="currentColor" stroke-width="1"/>
+          <path d="M240 240 Q275 275 310 310 Q270 260 240 240Z" class="color-zone" data-zone="petal-br" fill="#f0e6d6" stroke="currentColor" stroke-width="1"/>
+          <circle cx="200" cy="200" r="70" fill="none" stroke="currentColor" stroke-width="0.6" stroke-dasharray="3,5" opacity="0.3"/>
+          <circle cx="200" cy="200" r="100" class="color-zone" data-zone="ring" fill="none" stroke="currentColor" stroke-width="6" opacity="0.08"/>
+        </svg>
+      </div>
+      <div class="color-palette">
+        <p class="palette-label t-dim">矿物色</p>
+        <div class="palette-colors">
+          <button class="color-btn active" data-color="#b5332e" style="background:#b5332e" title="朱砂" aria-label="朱砂"></button>
+          <button class="color-btn" data-color="#2d5e40" style="background:#2d5e40" title="石绿" aria-label="石绿"></button>
+          <button class="color-btn" data-color="#1a4a6e" style="background:#1a4a6e" title="石青" aria-label="石青"></button>
+          <button class="color-btn" data-color="#c4956a" style="background:#c4956a" title="土金" aria-label="土金"></button>
+          <button class="color-btn" data-color="#7a5230" style="background:#7a5230" title="赭石" aria-label="赭石"></button>
+          <button class="color-btn" data-color="#ddd0b8" style="background:#ddd0b8" title="蛤粉" aria-label="蛤粉"></button>
+          <button class="color-btn" data-color="#5c3350" style="background:#5c3350" title="紫矿" aria-label="紫矿"></button>
+          <button class="color-btn" data-color="#c9a030" style="background:#c9a030" title="雌黄" aria-label="雌黄"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <blockquote>敦煌者，吾国学术之伤心史也。<cite>陈寅恪</cite></blockquote>
+    <p>735 窟 · 45000 m² 壁画 · 2415 尊彩塑 · 跨越十个朝代</p>
+    <nav class="footer-nav">
+      <a href="index.html">首页</a>
+      <a href="html/overview.html">概览</a>
+      <a href="html/mogao.html">莫高窟</a>
+      <a href="html/murals.html">壁画</a>
+      <a href="html/apsaras.html">飞天</a>
+      <a href="html/library-cave.html">藏经洞</a>
+      <a href="html/silk-road.html">丝路</a>
+      <a href="html/colors.html">色彩</a>
+      <a href="html/donors.html">供养人</a>
+      <a href="html/dance.html">乐舞</a>
+      <a href="html/digital.html">数字敦煌</a>
+    </nav>
+    <p class="ft-small">静态展示页 · 2026</p>
+  </footer>
+
+  <!-- 通用JavaScript -->
+  <script src="js/common.js"></script>
+  <!-- 组件相关JavaScript -->
+  <script src="js/components.js"></script>
+  <!-- Banner轮播JavaScript -->
+  <script src="js/banner.js"></script>
+  <!-- 首页专用JavaScript -->
+  <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+/* ===== 通用样式 ===== */
+/* 重置和基础样式 */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* 颜色变量定义 */
+:root {
+  --bg: #f0e6d6;
+  --bg2: #e5d8c4;
+  --ink: #2a2118;
+  --ink2: #4a3d30;
+  --accent: #9a7050;
+  --accent2: #6b5535;
+  --dim: #7a6b58;
+  --ff-sans: "PingFang SC", "Microsoft YaHei", sans-serif;
+  --ff-serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", Georgia, serif;
+}
+
+/* 基础页面样式 */
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--ff-serif);
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.9;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 文字层级样式 */
+.t-body {
+  color: var(--ink);
+  font-size: 0.92rem;
+  line-height: 1.85;
+}
+
+.t-label {
+  font-family: var(--ff-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  color: var(--ink2);
+}
+
+.t-dim {
+  font-family: var(--ff-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--dim);
+}
+
+/* 响应式设计 */
+@media (max-width: 640px) {
+  .sec { padding: 4rem 6vw; }
+  .events { padding-left: 1.8rem; }
+}
+@media (max-width: 640px) {
+  .events li::before {
+    left: -2.15rem; /* 2.85 - (2.5 - 1.8) = 2.15 */
+  }
+}
